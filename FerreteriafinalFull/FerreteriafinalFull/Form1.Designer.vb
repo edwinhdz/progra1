@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,161 +20,154 @@ Partial Class Form1
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCompras = New System.Windows.Forms.Button()
+        Me.btnVentas = New System.Windows.Forms.Button()
+        Me.btnProveedores = New System.Windows.Forms.Button()
+        Me.btnProductos = New System.Windows.Forms.Button()
+        Me.btnClientes = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsarchivo = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tlinventario = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.CieToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button5
+        'btnCompras
         '
-        Me.Button5.BackColor = System.Drawing.Color.Teal
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button5.Location = New System.Drawing.Point(171, 150)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(143, 50)
-        Me.Button5.TabIndex = 46
-        Me.Button5.Tag = ""
-        Me.Button5.Text = "Compras"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btnCompras.BackColor = System.Drawing.Color.Teal
+        Me.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCompras.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCompras.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCompras.Location = New System.Drawing.Point(171, 150)
+        Me.btnCompras.Name = "btnCompras"
+        Me.btnCompras.Size = New System.Drawing.Size(143, 50)
+        Me.btnCompras.TabIndex = 46
+        Me.btnCompras.Tag = ""
+        Me.btnCompras.Text = "Compras"
+        Me.btnCompras.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnVentas
         '
-        Me.Button4.BackColor = System.Drawing.Color.Teal
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button4.Location = New System.Drawing.Point(22, 150)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(143, 50)
-        Me.Button4.TabIndex = 45
-        Me.Button4.Tag = ""
-        Me.Button4.Text = "Ventas"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnVentas.BackColor = System.Drawing.Color.Teal
+        Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnVentas.Location = New System.Drawing.Point(22, 150)
+        Me.btnVentas.Name = "btnVentas"
+        Me.btnVentas.Size = New System.Drawing.Size(143, 50)
+        Me.btnVentas.TabIndex = 45
+        Me.btnVentas.Tag = ""
+        Me.btnVentas.Text = "Ventas"
+        Me.btnVentas.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnProveedores
         '
-        Me.Button3.BackColor = System.Drawing.Color.Teal
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(320, 72)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(143, 50)
-        Me.Button3.TabIndex = 44
-        Me.Button3.Tag = ""
-        Me.Button3.Text = "Proveedores"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnProveedores.BackColor = System.Drawing.Color.Teal
+        Me.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProveedores.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnProveedores.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnProveedores.Location = New System.Drawing.Point(320, 72)
+        Me.btnProveedores.Name = "btnProveedores"
+        Me.btnProveedores.Size = New System.Drawing.Size(143, 50)
+        Me.btnProveedores.TabIndex = 44
+        Me.btnProveedores.Tag = ""
+        Me.btnProveedores.Text = "Proveedores"
+        Me.btnProveedores.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnProductos
         '
-        Me.Button2.BackColor = System.Drawing.Color.Teal
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(171, 72)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(143, 50)
-        Me.Button2.TabIndex = 43
-        Me.Button2.Tag = ""
-        Me.Button2.Text = "Productos"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnProductos.BackColor = System.Drawing.Color.Teal
+        Me.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnProductos.Location = New System.Drawing.Point(171, 72)
+        Me.btnProductos.Name = "btnProductos"
+        Me.btnProductos.Size = New System.Drawing.Size(143, 50)
+        Me.btnProductos.TabIndex = 43
+        Me.btnProductos.Tag = ""
+        Me.btnProductos.Text = "Productos"
+        Me.btnProductos.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnClientes
         '
-        Me.Button1.BackColor = System.Drawing.Color.Teal
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(22, 72)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(143, 50)
-        Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Clientes"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnClientes.BackColor = System.Drawing.Color.Teal
+        Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnClientes.Location = New System.Drawing.Point(22, 72)
+        Me.btnClientes.Name = "btnClientes"
+        Me.btnClientes.Size = New System.Drawing.Size(143, 50)
+        Me.btnClientes.TabIndex = 42
+        Me.btnClientes.Text = "Clientes"
+        Me.btnClientes.UseVisualStyleBackColor = False
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.ProveedorToolStripMenuItem, Me.CieToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsarchivo, Me.tlinventario})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(492, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(519, 24)
         Me.MenuStrip1.TabIndex = 41
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'ArchivoToolStripMenuItem
+        'tsarchivo
         '
-        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ArchivoToolStripMenuItem.Text = "Archivo"
+        Me.tsarchivo.Name = "tsarchivo"
+        Me.tsarchivo.Size = New System.Drawing.Size(60, 20)
+        Me.tsarchivo.Text = "Archivo"
         '
-        'ProveedorToolStripMenuItem
+        'tlinventario
         '
-        Me.ProveedorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.AToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.BorrarToolStripMenuItem, Me.ToolStripMenuItem2})
-        Me.ProveedorToolStripMenuItem.Name = "ProveedorToolStripMenuItem"
-        Me.ProveedorToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
-        Me.ProveedorToolStripMenuItem.Text = "Inventario"
+        Me.tlinventario.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultarToolStripMenuItem, Me.AToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.BorrarToolStripMenuItem, Me.ToolStripMenuItem2})
+        Me.tlinventario.Name = "tlinventario"
+        Me.tlinventario.Size = New System.Drawing.Size(72, 20)
+        Me.tlinventario.Text = "Inventario"
         '
         'ConsultarToolStripMenuItem
         '
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'AToolStripMenuItem
         '
         Me.AToolStripMenuItem.Name = "AToolStripMenuItem"
-        Me.AToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.AToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AToolStripMenuItem.Text = "Agregar..."
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ModificarToolStripMenuItem.Text = "Modificar..."
         '
         'BorrarToolStripMenuItem
         '
         Me.BorrarToolStripMenuItem.Name = "BorrarToolStripMenuItem"
-        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.BorrarToolStripMenuItem.Text = "Borrar..."
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(131, 6)
-        '
-        'CieToolStripMenuItem
-        '
-        Me.CieToolStripMenuItem.Name = "CieToolStripMenuItem"
-        Me.CieToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
-        Me.CieToolStripMenuItem.Text = "Inventario"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(149, 6)
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(492, 309)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(519, 252)
+        Me.Controls.Add(Me.btnCompras)
+        Me.Controls.Add(Me.btnVentas)
+        Me.Controls.Add(Me.btnProveedores)
+        Me.Controls.Add(Me.btnProductos)
+        Me.Controls.Add(Me.btnClientes)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -185,18 +178,17 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCompras As Button
+    Friend WithEvents btnVentas As Button
+    Friend WithEvents btnProveedores As Button
+    Friend WithEvents btnProductos As Button
+    Friend WithEvents btnClientes As Button
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ArchivoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProveedorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsarchivo As ToolStripMenuItem
+    Friend WithEvents tlinventario As ToolStripMenuItem
     Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BorrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
-    Friend WithEvents CieToolStripMenuItem As ToolStripMenuItem
 End Class

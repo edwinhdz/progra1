@@ -27,15 +27,15 @@ Partial Class Form2
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnguardar = New System.Windows.Forms.Button()
+        Me.btneditar = New System.Windows.Forms.Button()
+        Me.btnnuevo = New System.Windows.Forms.Button()
+        Me.lbcelular = New System.Windows.Forms.Label()
+        Me.lbidtelefono = New System.Windows.Forms.Label()
+        Me.lbiddireccion = New System.Windows.Forms.Label()
+        Me.lbidapellido = New System.Windows.Forms.Label()
+        Me.lbNombre = New System.Windows.Forms.Label()
+        Me.lbidcliente = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -83,15 +83,15 @@ Partial Class Form2
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.btnguardar)
+        Me.GroupBox1.Controls.Add(Me.btneditar)
+        Me.GroupBox1.Controls.Add(Me.btnnuevo)
+        Me.GroupBox1.Controls.Add(Me.lbcelular)
+        Me.GroupBox1.Controls.Add(Me.lbidtelefono)
+        Me.GroupBox1.Controls.Add(Me.lbiddireccion)
+        Me.GroupBox1.Controls.Add(Me.lbidapellido)
+        Me.GroupBox1.Controls.Add(Me.lbNombre)
+        Me.GroupBox1.Controls.Add(Me.lbidcliente)
         Me.GroupBox1.Controls.Add(Me.TextBox6)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
@@ -103,88 +103,88 @@ Partial Class Form2
         Me.GroupBox1.Size = New System.Drawing.Size(315, 253)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.GroupBox1.Text = "Registro Clientes"
         '
-        'Button3
+        'btnguardar
         '
-        Me.Button3.Location = New System.Drawing.Point(199, 219)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Guardar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnguardar.Location = New System.Drawing.Point(199, 219)
+        Me.btnguardar.Name = "btnguardar"
+        Me.btnguardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnguardar.TabIndex = 14
+        Me.btnguardar.Text = "Guardar"
+        Me.btnguardar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btneditar
         '
-        Me.Button2.Location = New System.Drawing.Point(118, 219)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Editar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btneditar.Location = New System.Drawing.Point(118, 219)
+        Me.btneditar.Name = "btneditar"
+        Me.btneditar.Size = New System.Drawing.Size(75, 23)
+        Me.btneditar.TabIndex = 13
+        Me.btneditar.Text = "Editar"
+        Me.btneditar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnnuevo
         '
-        Me.Button1.Location = New System.Drawing.Point(37, 219)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Nuevo"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnnuevo.Location = New System.Drawing.Point(37, 219)
+        Me.btnnuevo.Name = "btnnuevo"
+        Me.btnnuevo.Size = New System.Drawing.Size(75, 23)
+        Me.btnnuevo.TabIndex = 12
+        Me.btnnuevo.Text = "Nuevo"
+        Me.btnnuevo.UseVisualStyleBackColor = True
         '
-        'Label6
+        'lbcelular
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(25, 179)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 13)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Celular"
+        Me.lbcelular.AutoSize = True
+        Me.lbcelular.Location = New System.Drawing.Point(25, 179)
+        Me.lbcelular.Name = "lbcelular"
+        Me.lbcelular.Size = New System.Drawing.Size(39, 13)
+        Me.lbcelular.TabIndex = 11
+        Me.lbcelular.Text = "Celular"
         '
-        'Label5
+        'lbidtelefono
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(25, 153)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 13)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Telefono"
+        Me.lbidtelefono.AutoSize = True
+        Me.lbidtelefono.Location = New System.Drawing.Point(25, 153)
+        Me.lbidtelefono.Name = "lbidtelefono"
+        Me.lbidtelefono.Size = New System.Drawing.Size(49, 13)
+        Me.lbidtelefono.TabIndex = 10
+        Me.lbidtelefono.Text = "Telefono"
         '
-        'Label4
+        'lbiddireccion
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(25, 127)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Direccion"
+        Me.lbiddireccion.AutoSize = True
+        Me.lbiddireccion.Location = New System.Drawing.Point(25, 127)
+        Me.lbiddireccion.Name = "lbiddireccion"
+        Me.lbiddireccion.Size = New System.Drawing.Size(52, 13)
+        Me.lbiddireccion.TabIndex = 9
+        Me.lbiddireccion.Text = "Direccion"
         '
-        'Label3
+        'lbidapellido
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 101)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Apellido"
+        Me.lbidapellido.AutoSize = True
+        Me.lbidapellido.Location = New System.Drawing.Point(25, 101)
+        Me.lbidapellido.Name = "lbidapellido"
+        Me.lbidapellido.Size = New System.Drawing.Size(44, 13)
+        Me.lbidapellido.TabIndex = 8
+        Me.lbidapellido.Text = "Apellido"
         '
-        'Label2
+        'lbNombre
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 77)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Nombre"
+        Me.lbNombre.AutoSize = True
+        Me.lbNombre.Location = New System.Drawing.Point(25, 77)
+        Me.lbNombre.Name = "lbNombre"
+        Me.lbNombre.Size = New System.Drawing.Size(44, 13)
+        Me.lbNombre.TabIndex = 7
+        Me.lbNombre.Text = "Nombre"
         '
-        'Label1
+        'lbidcliente
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(25, 51)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Id Cliente"
+        Me.lbidcliente.AutoSize = True
+        Me.lbidcliente.Location = New System.Drawing.Point(25, 51)
+        Me.lbidcliente.Name = "lbidcliente"
+        Me.lbidcliente.Size = New System.Drawing.Size(51, 13)
+        Me.lbidcliente.TabIndex = 6
+        Me.lbidcliente.Text = "Id Cliente"
         '
         'TextBox6
         '
@@ -252,15 +252,15 @@ Partial Class Form2
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents btnguardar As Button
+    Friend WithEvents btneditar As Button
+    Friend WithEvents btnnuevo As Button
+    Friend WithEvents lbcelular As Label
+    Friend WithEvents lbidtelefono As Label
+    Friend WithEvents lbiddireccion As Label
+    Friend WithEvents lbidapellido As Label
+    Friend WithEvents lbNombre As Label
+    Friend WithEvents lbidcliente As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox4 As TextBox
