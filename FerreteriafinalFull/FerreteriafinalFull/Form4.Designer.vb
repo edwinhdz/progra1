@@ -24,25 +24,25 @@ Partial Class Form4
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.dgvProveedores = New System.Windows.Forms.DataGridView()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxProveedore = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txttelefono = New System.Windows.Forms.TextBox()
+        Me.txtDirección = New System.Windows.Forms.TextBox()
+        Me.txtProveedor = New System.Windows.Forms.TextBox()
+        Me.txtCódigoProveedor = New System.Windows.Forms.TextBox()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,11 +57,11 @@ Partial Class Form4
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.DataGridView1)
-        Me.GroupBox4.Controls.Add(Me.Button4)
-        Me.GroupBox4.Controls.Add(Me.Button5)
+        Me.GroupBox4.Controls.Add(Me.dgvProveedores)
+        Me.GroupBox4.Controls.Add(Me.btnEliminar)
+        Me.GroupBox4.Controls.Add(Me.btnBuscar)
         Me.GroupBox4.Controls.Add(Me.TextBox7)
-        Me.GroupBox4.Controls.Add(Me.ComboBox1)
+        Me.GroupBox4.Controls.Add(Me.cbxProveedore)
         Me.GroupBox4.Location = New System.Drawing.Point(356, -1)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(384, 355)
@@ -69,32 +69,32 @@ Partial Class Form4
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Lista de Proveedores"
         '
-        'DataGridView1
+        'dgvProveedores
         '
-        Me.DataGridView1.AllowUserToOrderColumns = True
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(7, 88)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(371, 261)
-        Me.DataGridView1.TabIndex = 4
+        Me.dgvProveedores.AllowUserToOrderColumns = True
+        Me.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProveedores.Location = New System.Drawing.Point(7, 88)
+        Me.dgvProveedores.Name = "dgvProveedores"
+        Me.dgvProveedores.Size = New System.Drawing.Size(371, 261)
+        Me.dgvProveedores.TabIndex = 4
         '
-        'Button4
+        'btnEliminar
         '
-        Me.Button4.Location = New System.Drawing.Point(53, 57)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Eliminar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(53, 57)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btnBuscar
         '
-        Me.Button5.Location = New System.Drawing.Point(284, 56)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Buscar"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnBuscar.Location = New System.Drawing.Point(284, 56)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 2
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'TextBox7
         '
@@ -103,27 +103,27 @@ Partial Class Form4
         Me.TextBox7.Size = New System.Drawing.Size(224, 20)
         Me.TextBox7.TabIndex = 1
         '
-        'ComboBox1
+        'cbxProveedore
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(7, 30)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cbxProveedore.FormattingEnabled = True
+        Me.cbxProveedore.Location = New System.Drawing.Point(7, 30)
+        Me.cbxProveedore.Name = "cbxProveedore"
+        Me.cbxProveedore.Size = New System.Drawing.Size(121, 21)
+        Me.cbxProveedore.TabIndex = 0
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnGuardar)
+        Me.GroupBox1.Controls.Add(Me.btnEditar)
+        Me.GroupBox1.Controls.Add(Me.btnNuevo)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.txttelefono)
+        Me.GroupBox1.Controls.Add(Me.txtDirección)
+        Me.GroupBox1.Controls.Add(Me.txtProveedor)
+        Me.GroupBox1.Controls.Add(Me.txtCódigoProveedor)
         Me.GroupBox1.Location = New System.Drawing.Point(35, 70)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(315, 189)
@@ -131,32 +131,32 @@ Partial Class Form4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registro Proveedor"
         '
-        'Button3
+        'btnGuardar
         '
-        Me.Button3.Location = New System.Drawing.Point(194, 143)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Guardar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(194, 143)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 14
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEditar
         '
-        Me.Button2.Location = New System.Drawing.Point(113, 143)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Editar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEditar.Location = New System.Drawing.Point(113, 143)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.TabIndex = 13
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnNuevo
         '
-        Me.Button1.Location = New System.Drawing.Point(32, 143)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Nuevo"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnNuevo.Location = New System.Drawing.Point(32, 143)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
+        Me.btnNuevo.TabIndex = 12
+        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -194,33 +194,33 @@ Partial Class Form4
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Codigo Proveedor"
         '
-        'TextBox6
+        'txttelefono
         '
-        Me.TextBox6.Location = New System.Drawing.Point(113, 107)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox6.TabIndex = 5
+        Me.txttelefono.Location = New System.Drawing.Point(113, 107)
+        Me.txttelefono.Name = "txttelefono"
+        Me.txttelefono.Size = New System.Drawing.Size(174, 20)
+        Me.txttelefono.TabIndex = 5
         '
-        'TextBox5
+        'txtDirección
         '
-        Me.TextBox5.Location = New System.Drawing.Point(113, 81)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox5.TabIndex = 4
+        Me.txtDirección.Location = New System.Drawing.Point(113, 81)
+        Me.txtDirección.Name = "txtDirección"
+        Me.txtDirección.Size = New System.Drawing.Size(174, 20)
+        Me.txtDirección.TabIndex = 4
         '
-        'TextBox4
+        'txtProveedor
         '
-        Me.TextBox4.Location = New System.Drawing.Point(113, 55)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox4.TabIndex = 3
+        Me.txtProveedor.Location = New System.Drawing.Point(113, 55)
+        Me.txtProveedor.Name = "txtProveedor"
+        Me.txtProveedor.Size = New System.Drawing.Size(174, 20)
+        Me.txtProveedor.TabIndex = 3
         '
-        'TextBox3
+        'txtCódigoProveedor
         '
-        Me.TextBox3.Location = New System.Drawing.Point(113, 29)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox3.TabIndex = 2
+        Me.txtCódigoProveedor.Location = New System.Drawing.Point(113, 29)
+        Me.txtCódigoProveedor.Name = "txtCódigoProveedor"
+        Me.txtCódigoProveedor.Size = New System.Drawing.Size(174, 20)
+        Me.txtCódigoProveedor.TabIndex = 2
         '
         'Form4
         '
@@ -234,7 +234,7 @@ Partial Class Form4
         Me.Text = "Form4"
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -243,21 +243,21 @@ Partial Class Form4
 
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents dgvProveedores As DataGridView
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnBuscar As Button
     Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxProveedore As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnNuevo As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txttelefono As TextBox
+    Friend WithEvents txtDirección As TextBox
+    Friend WithEvents txtProveedor As TextBox
+    Friend WithEvents txtCódigoProveedor As TextBox
 End Class
