@@ -112,7 +112,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsarchivo, Me.tlinventario})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(519, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(502, 24)
         Me.MenuStrip1.TabIndex = 41
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -162,7 +162,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(519, 252)
+        Me.ClientSize = New System.Drawing.Size(502, 241)
         Me.Controls.Add(Me.btnCompras)
         Me.Controls.Add(Me.btnVentas)
         Me.Controls.Add(Me.btnProveedores)
