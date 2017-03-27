@@ -33,6 +33,8 @@ Partial Class Form3
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.cbxProductos = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtPrecioVenta = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtPrecioUnitario = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -47,8 +49,6 @@ Partial Class Form3
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -151,7 +151,7 @@ Partial Class Form3
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Label7)
-        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.txtPrecioVenta)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.txtPrecioUnitario)
         Me.GroupBox3.Location = New System.Drawing.Point(27, 258)
@@ -160,6 +160,22 @@ Partial Class Form3
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Precio"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(3, 60)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(83, 13)
+        Me.Label7.TabIndex = 10
+        Me.Label7.Text = "Precio de Venta"
+        '
+        'txtPrecioVenta
+        '
+        Me.txtPrecioVenta.Location = New System.Drawing.Point(89, 55)
+        Me.txtPrecioVenta.Name = "txtPrecioVenta"
+        Me.txtPrecioVenta.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrecioVenta.TabIndex = 9
         '
         'Label6
         '
@@ -285,22 +301,6 @@ Partial Class Form3
         Me.txtCodigoProducto.Size = New System.Drawing.Size(223, 20)
         Me.txtCodigoProducto.TabIndex = 0
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(89, 55)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 9
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(3, 60)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(83, 13)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "Precio de Venta"
-        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -355,5 +355,5 @@ Partial Class Form3
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtCodigoProducto As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPrecioVenta As TextBox
 End Class

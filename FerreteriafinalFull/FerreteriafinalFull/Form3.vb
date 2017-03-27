@@ -12,7 +12,7 @@ Public Class Form3
             fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
             sw = New StreamWriter(fs)
             MsgBox("Abriendo archivo")
-            str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtPrecioUnitario.Text & " "
+            str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text
             sw.WriteLine(str)
             MsgBox("Datos Guardados")
         Catch ex As Exception
