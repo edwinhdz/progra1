@@ -132,31 +132,31 @@ Partial Class Form1
         'ConsultarToolStripMenuItem
         '
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'AToolStripMenuItem
         '
         Me.AToolStripMenuItem.Name = "AToolStripMenuItem"
-        Me.AToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.AToolStripMenuItem.Text = "Agregar..."
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.ModificarToolStripMenuItem.Text = "Modificar..."
         '
         'BorrarToolStripMenuItem
         '
         Me.BorrarToolStripMenuItem.Name = "BorrarToolStripMenuItem"
-        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BorrarToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.BorrarToolStripMenuItem.Text = "Borrar..."
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(131, 6)
         '
         'Form1
         '
