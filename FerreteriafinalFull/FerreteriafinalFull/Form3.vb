@@ -38,27 +38,32 @@ Public Class Form3
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-
-    End Sub
-
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Try
             ' Crear un flujo desde el fichero doc.txt
             sr = New StreamReader("C:\Programacion1\Datos.txt")
             ' Leer del fichero una línea de texto
             str = sr.ReadLine()
-            Do While Not str Is Nothing
-                Dim categorias() As String = str.Split(" ")
-                MsgBox(categorias(0), categorias(1), categorias(2))
-            Loop
-
-            sr.Close()
+            While (str <> Nothing)
+                MsgBox("prueba")
+                ' Mostrar la línea leída
+                Console.WriteLine(str)
+                ' Leer la línea siguiente
+                str = sr.ReadLine()
+            End While
         Catch i As IOException
             Console.WriteLine("Error: " + i.Message)
         Finally
             ' Cerrar el fichero
             If (Not sr Is Nothing) Then sr.Close()
         End Try
+   
+    End Sub
+
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
 End Class
