@@ -41,7 +41,7 @@ Public Class Form3
 
     End Sub
 
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             ' Crear un flujo desde el fichero doc.txt
             sr = New StreamReader("C:\Programacion1\Datos.txt")
