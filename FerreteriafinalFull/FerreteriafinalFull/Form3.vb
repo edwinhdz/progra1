@@ -31,6 +31,7 @@ Public Class Form3
         txtPrecioUnitario.Clear()
         txtPrecioVenta.Clear()
         txtProveedor.Clear()
+        leerProductos()
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -79,6 +80,26 @@ Public Class Form3
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        leerProductos()
+    End Sub
+    Private Sub leerProductos()
+        'AÑADE AL COMBOBOX LOS CODIGOS DE LOS PRODUCTOS
+        Try
+            cbxProductos.Items.Clear()
+            sr = New StreamReader("C:\Programacion1\Datos.txt")
+            ' Leer del fichero una línea de texto
+            str = sr.ReadLine()
+            Do While Not str Is Nothing
+                Dim categorias() As String = str.Split(" ")
+                cbxProductos.Items.Add(categorias(0))
+                str = sr.ReadLine()
+            Loop
+            sr.Close()
+        Catch ex As IOException
+            MsgBox("Error: " + ex.Message)
+        Finally
+            ' Cerrar el fichero
+            If (Not sr Is Nothing) Then sr.Close()
+        End Try
     End Sub
 End Class
