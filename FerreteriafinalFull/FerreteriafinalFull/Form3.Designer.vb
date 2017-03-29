@@ -30,7 +30,6 @@ Partial Class Form3
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.cbxProductos = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -49,6 +48,7 @@ Partial Class Form3
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -94,10 +94,10 @@ Partial Class Form3
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.txtBuscar)
         Me.GroupBox4.Controls.Add(Me.dgvProductos)
         Me.GroupBox4.Controls.Add(Me.btnEliminar)
         Me.GroupBox4.Controls.Add(Me.Button1)
-        Me.GroupBox4.Controls.Add(Me.TextBox7)
         Me.GroupBox4.Controls.Add(Me.cbxProductos)
         Me.GroupBox4.Location = New System.Drawing.Point(417, 23)
         Me.GroupBox4.Name = "GroupBox4"
@@ -132,13 +132,6 @@ Partial Class Form3
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(135, 30)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(224, 20)
-        Me.TextBox7.TabIndex = 1
         '
         'cbxProductos
         '
@@ -301,6 +294,13 @@ Partial Class Form3
         Me.txtCodigoProducto.Size = New System.Drawing.Size(223, 20)
         Me.txtCodigoProducto.TabIndex = 0
         '
+        'txtBuscar
+        '
+        Me.txtBuscar.Location = New System.Drawing.Point(141, 30)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(224, 20)
+        Me.txtBuscar.TabIndex = 5
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -337,7 +337,6 @@ Partial Class Form3
     Friend WithEvents dgvProductos As DataGridView
     Friend WithEvents btnEliminar As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents cbxProductos As ComboBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label6 As Label
@@ -356,4 +355,5 @@ Partial Class Form3
     Friend WithEvents txtCodigoProducto As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtPrecioVenta As TextBox
+    Friend WithEvents txtBuscar As TextBox
 End Class

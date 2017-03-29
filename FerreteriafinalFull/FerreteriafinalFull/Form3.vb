@@ -49,7 +49,7 @@ Public Class Form3
             str = sr.ReadLine()
             Do While Not str Is Nothing
                 Dim categorias() As String = str.Split(" ")
-                If str.Contains(txtBuscar.Text) Then
+                If str.Contains(.Text) Then
                     MsgBox(categorias(0) & " " & categorias(1) & " " & " " & categorias(2))
                 End If
                 str = sr.ReadLine()
