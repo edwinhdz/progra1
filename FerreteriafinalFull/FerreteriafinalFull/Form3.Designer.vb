@@ -49,6 +49,11 @@ Partial Class Form3
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -101,7 +106,7 @@ Partial Class Form3
         Me.GroupBox4.Controls.Add(Me.cbxProductos)
         Me.GroupBox4.Location = New System.Drawing.Point(417, 23)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(365, 313)
+        Me.GroupBox4.Size = New System.Drawing.Size(602, 334)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Lista de Productos"
@@ -117,9 +122,10 @@ Partial Class Form3
         '
         Me.dgvProductos.AllowUserToOrderColumns = True
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.Column4})
         Me.dgvProductos.Location = New System.Drawing.Point(7, 88)
         Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(358, 225)
+        Me.dgvProductos.Size = New System.Drawing.Size(560, 225)
         Me.dgvProductos.TabIndex = 4
         '
         'btnEliminar
@@ -301,11 +307,36 @@ Partial Class Form3
         Me.txtCodigoProducto.Size = New System.Drawing.Size(223, 20)
         Me.txtCodigoProducto.TabIndex = 0
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "SKU"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Cantidad"
+        Me.Column5.Name = "Column5"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "P. Unitario"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "P. Venta"
+        Me.Column4.Name = "Column4"
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(809, 356)
+        Me.ClientSize = New System.Drawing.Size(1026, 348)
         Me.Controls.Add(Me.Productos)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnEditar)
@@ -356,4 +387,9 @@ Partial Class Form3
     Friend WithEvents Label7 As Label
     Friend WithEvents txtPrecioVenta As TextBox
     Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

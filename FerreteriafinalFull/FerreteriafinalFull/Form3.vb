@@ -43,20 +43,22 @@ Public Class Form3
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
+            dgvProductos.Rows.Clear()
             ' Crear un flujo desde el fichero doc.txt
             sr = New StreamReader("C:\Programacion1\Datos.txt")
             ' Leer del fichero una línea de texto
             str = sr.ReadLine()
             Do While Not str Is Nothing
                 Dim categorias() As String = str.Split(" ")
-                If str.Contains(txtBuscar.Text) Then
-                    MsgBox(categorias(0) & " " & categorias(1) & " " & " " & categorias(2))
+                If categorias(0) = txtBuscar.Text Then
+                    dgvProductos.Rows.Add(categorias(0), categorias(1), categorias(2), categorias(3), categorias(4))
+                    'MsgBox(categorias(0) & " " & categorias(1) & " " & " " & categorias(2))
                 End If
                 str = sr.ReadLine()
             Loop
             sr.Close()
         Catch ex As IOException
-            Console.WriteLine("Error: " + ex.Message)
+            MsgBox("Error: " + ex.Message)
         Finally
             ' Cerrar el fichero
             If (Not sr Is Nothing) Then sr.Close()
@@ -65,5 +67,18 @@ Public Class Form3
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+
+    End Sub
+
+    Private Sub dgvProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
+
+    End Sub
+
+    Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
+
+    End Sub
+
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
