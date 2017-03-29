@@ -49,12 +49,14 @@ Public Class Form3
             str = sr.ReadLine()
             Do While Not str Is Nothing
                 Dim categorias() As String = str.Split(" ")
-                MsgBox(categorias(0), categorias(1), categorias(2))
+                If str.Contains(txtBuscar.Text) Then
+                    MsgBox(categorias(0) & " " & categorias(1) & " " & " " & categorias(2))
+                End If
+                str = sr.ReadLine()
             Loop
-
             sr.Close()
-        Catch i As IOException
-            Console.WriteLine("Error: " + i.Message)
+        Catch ex As IOException
+            Console.WriteLine("Error: " + ex.Message)
         Finally
             ' Cerrar el fichero
             If (Not sr Is Nothing) Then sr.Close()
