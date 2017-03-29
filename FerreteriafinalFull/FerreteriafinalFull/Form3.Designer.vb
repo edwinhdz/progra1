@@ -27,6 +27,7 @@ Partial Class Form3
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -48,7 +49,6 @@ Partial Class Form3
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -105,6 +105,13 @@ Partial Class Form3
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Lista de Productos"
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Location = New System.Drawing.Point(141, 30)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(224, 20)
+        Me.txtBuscar.TabIndex = 5
         '
         'dgvProductos
         '
@@ -293,13 +300,6 @@ Partial Class Form3
         Me.txtCodigoProducto.Name = "txtCodigoProducto"
         Me.txtCodigoProducto.Size = New System.Drawing.Size(223, 20)
         Me.txtCodigoProducto.TabIndex = 0
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.Location = New System.Drawing.Point(141, 30)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(224, 20)
-        Me.txtBuscar.TabIndex = 5
         '
         'Form3
         '
