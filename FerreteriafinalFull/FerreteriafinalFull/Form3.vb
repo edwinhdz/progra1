@@ -168,4 +168,16 @@ Public Class Form3
     Private Sub cbxProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxProductos.SelectedIndexChanged
 
     End Sub
+
+    Private Sub txtCodigoProducto_TextChanged(sender As Object, e As EventArgs) Handles txtCodigoProducto.TextChanged
+
+    End Sub
+
+    Private Sub txtCodigoProducto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCodigoProducto.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        End If
+    End Sub
 End Class
