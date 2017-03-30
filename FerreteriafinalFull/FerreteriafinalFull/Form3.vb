@@ -32,6 +32,7 @@ Public Class Form3
         txtPrecioVenta.Clear()
         txtProveedor.Clear()
         leerProductos()
+        CargarProductos()
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -100,6 +101,7 @@ Public Class Form3
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         leerProductos()
+        CargarProductos()
     End Sub
     Private Sub leerProductos()
         'AÑADE AL COMBOBOX LOS CODIGOS DE LOS PRODUCTOS
@@ -120,5 +122,27 @@ Public Class Form3
             ' Cerrar el fichero
             If (Not sr Is Nothing) Then sr.Close()
         End Try
+    End Sub
+    Private Sub CargarProductos()
+        Try
+            dgvProductos.Rows.Clear()
+            ' Crear un flujo desde el fichero doc.txt
+            sr = New StreamReader("C:\Programacion1\Datos.txt")
+            ' Leer del fichero una línea de texto
+            str = sr.ReadLine()
+            Do While Not str Is Nothing
+                Dim categorias() As String = str.Split(" ")
+                dgvProductos.Rows.Add(categorias(0), categorias(1), categorias(2), categorias(3), categorias(4))
+                'MsgBox(categorias(0) & " " & categorias(1) & " " & " " & categorias(2))
+                str = sr.ReadLine()
+            Loop
+            sr.Close()
+        Catch ex As IOException
+            MsgBox("Error: " + ex.Message)
+        Finally
+            ' Cerrar el fichero
+            If (Not sr Is Nothing) Then sr.Close()
+        End Try
+
     End Sub
 End Class
