@@ -9,21 +9,27 @@ Public Class Form3
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
-            If Not Directory.Exists("C:\Programacion1\") Then
-                Directory.CreateDirectory("C:\Programacion1\")
+            If txtCodigoProducto.Text <> "" And txtNombre.Text <> "" And txtCantidad.Text <> "" And txtCodProveedor.Text <> "" And txtProveedor.Text <> "" And txtPrecioUnitario.Text <> "" And txtPrecioVenta.Text <> "" Then
+                If Not Directory.Exists("C:\Programacion1\") Then
+                    Directory.CreateDirectory("C:\Programacion1\")
+                End If
+                fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
+                sw = New StreamWriter(fs)
+                MsgBox("Abriendo archivo")
+                str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text
+                sw.WriteLine(str)
+                MsgBox("Datos Guardados")
+            Else
+                MsgBox("Faltan datos por llenar", MsgBoxStyle.Exclamation, "Aviso")
             End If
-            fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
-            sw = New StreamWriter(fs)
-            MsgBox("Abriendo archivo")
-            str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text
-            sw.WriteLine(str)
-            MsgBox("Datos Guardados")
         Catch ex As Exception
             MsgBox("Error : " & ex.Message)
         Finally
             MsgBox("Cerrando el archivo")
             If (Not sw Is Nothing) Then sw.Close()
+
         End Try
+
         txtCantidad.Clear()
         txtCodigoProducto.Clear()
         txtCodProveedor.Clear()
@@ -69,34 +75,37 @@ Public Class Form3
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        'crea el archivo temporal
-        sw = New StreamWriter("c:\Programacion1\temp.txt")
-        'lee los datos
-        sr = New StreamReader("C:\Programacion1\Datos.txt")
+        Try
+            'crea el archivo temporal
+            sw = New StreamWriter("c:\Programacion1\temp.txt")
+            'lee los datos
+            sr = New StreamReader("C:\Programacion1\Datos.txt")
 
-        'Aqui se guarda cada linea
-        Dim line As String
-        line = sr.ReadLine()
-        Do While Not line Is Nothing 'Verifica que la linea NO esté vacia
-            Dim categorias() As String = line.Split(" ") 'divide en secciones la cadena
-            If categorias(0) <> cbxProductos.Text Then 'La condicion es que mientras line sea diferente al codigo, se escribe todo, menos donde está el código
-                sw.WriteLine(line)
-            End If
-
+            'Aqui se guarda cada linea
+            Dim line As String
             line = sr.ReadLine()
-        Loop
-        'Se cierra la lectura y escritura
-        sw.Close()
-        sr.Close()
+            Do While Not line Is Nothing 'Verifica que la linea NO esté vacia
+                Dim categorias() As String = line.Split(" ") 'divide en secciones la cadena
+                If categorias(0) <> cbxProductos.Text Then 'La condicion es que mientras line sea diferente al codigo, se escribe todo, menos donde está el código
+                    sw.WriteLine(line)
+                End If
 
-        'aqui se renombrea el archivo temporal
-        File.Delete("c:\Programacion1\Datos.txt")
-        File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
-        leerProductos() 'Carga los productos en el combobox
-        CargarProductos() 'Carga los productos en el dataGridView
-    End Sub
+                line = sr.ReadLine()
+            Loop
+            'Se cierra la lectura y escritura
+            sw.Close()
+            sr.Close()
 
-    Private Sub dgvProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
+            'aqui se renombrea el archivo temporal
+            File.Delete("c:\Programacion1\Datos.txt")
+            File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
+            leerProductos() 'Carga los productos en el combobox
+            CargarProductos() 'Carga los productos en el dataGridView
+
+        Catch ex As Exception
+
+        End Try
+
 
     End Sub
 
@@ -109,7 +118,7 @@ Public Class Form3
         leerProductos()
         cbxProductos.SelectedIndex = 0
     End Sub
-    Private Sub leerProductos()
+    Public Sub leerProductos()
         'AÑADE AL COMBOBOX LOS CODIGOS DE LOS PRODUCTOS
         Try
             cbxProductos.Items.Clear()
@@ -129,7 +138,7 @@ Public Class Form3
             If (Not sr Is Nothing) Then sr.Close()
         End Try
     End Sub
-    Private Sub CargarProductos()
+    Public Sub CargarProductos()
         'Creacion de carpeta y archivo al abrir el form
         If Not Directory.Exists("C:\Programacion1") Then
             Directory.CreateDirectory("C:\Programacion1")

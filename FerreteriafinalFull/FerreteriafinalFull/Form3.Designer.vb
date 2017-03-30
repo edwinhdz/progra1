@@ -66,7 +66,7 @@ Partial Class Form3
         'Productos
         '
         Me.Productos.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Productos.Location = New System.Drawing.Point(123, 20)
+        Me.Productos.Location = New System.Drawing.Point(27, 9)
         Me.Productos.Name = "Productos"
         Me.Productos.Size = New System.Drawing.Size(155, 39)
         Me.Productos.TabIndex = 15
@@ -74,7 +74,7 @@ Partial Class Form3
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(155, 56)
+        Me.btnEditar.Location = New System.Drawing.Point(120, 56)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(75, 23)
         Me.btnEditar.TabIndex = 13
@@ -108,7 +108,7 @@ Partial Class Form3
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(250, 55)
+        Me.Button2.Location = New System.Drawing.Point(215, 55)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(104, 26)
         Me.Button2.TabIndex = 14
@@ -117,7 +117,7 @@ Partial Class Form3
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(141, 30)
+        Me.txtBuscar.Location = New System.Drawing.Point(386, 30)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(224, 20)
         Me.txtBuscar.TabIndex = 5
@@ -169,7 +169,7 @@ Partial Class Form3
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(53, 57)
+        Me.btnEliminar.Location = New System.Drawing.Point(18, 57)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
         Me.btnEliminar.TabIndex = 3
@@ -188,7 +188,7 @@ Partial Class Form3
         'cbxProductos
         '
         Me.cbxProductos.FormattingEnabled = True
-        Me.cbxProductos.Location = New System.Drawing.Point(7, 30)
+        Me.cbxProductos.Location = New System.Drawing.Point(18, 29)
         Me.cbxProductos.Name = "cbxProductos"
         Me.cbxProductos.Size = New System.Drawing.Size(121, 21)
         Me.cbxProductos.TabIndex = 0
