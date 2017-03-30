@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class Form6
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,23 +22,7 @@ Partial Class Form3
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Productos = New System.Windows.Forms.Label()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.dgvProductos = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.cbxProductos = New System.Windows.Forms.ComboBox()
+        Me.txtGuardar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtPrecioVenta = New System.Windows.Forms.TextBox()
@@ -55,143 +39,20 @@ Partial Class Form3
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
-        Me.GroupBox4.SuspendLayout()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblCodigoProducto = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Productos
+        'txtGuardar
         '
-        Me.Productos.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Productos.Location = New System.Drawing.Point(27, 9)
-        Me.Productos.Name = "Productos"
-        Me.Productos.Size = New System.Drawing.Size(155, 39)
-        Me.Productos.TabIndex = 15
-        Me.Productos.Text = "Productos"
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Location = New System.Drawing.Point(122, 56)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEditar.TabIndex = 13
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'btnNuevo
-        '
-        Me.btnNuevo.Location = New System.Drawing.Point(299, 284)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
-        Me.btnNuevo.TabIndex = 12
-        Me.btnNuevo.Text = "Agregar"
-        Me.btnNuevo.UseVisualStyleBackColor = True
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.Button2)
-        Me.GroupBox4.Controls.Add(Me.txtBuscar)
-        Me.GroupBox4.Controls.Add(Me.dgvProductos)
-        Me.GroupBox4.Controls.Add(Me.btnEditar)
-        Me.GroupBox4.Controls.Add(Me.btnEliminar)
-        Me.GroupBox4.Controls.Add(Me.Button1)
-        Me.GroupBox4.Controls.Add(Me.cbxProductos)
-        Me.GroupBox4.Location = New System.Drawing.Point(417, 23)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(743, 352)
-        Me.GroupBox4.TabIndex = 11
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Lista de Productos"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(224, 57)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(104, 22)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "Aumentar cantidad"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.Location = New System.Drawing.Point(386, 30)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(224, 20)
-        Me.txtBuscar.TabIndex = 5
-        '
-        'dgvProductos
-        '
-        Me.dgvProductos.AllowUserToOrderColumns = True
-        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.dgvProductos.Location = New System.Drawing.Point(7, 88)
-        Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(708, 252)
-        Me.dgvProductos.TabIndex = 4
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "SKU"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Cod Proveedor"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "NombreProveedor"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "P. Unitario"
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "P. Venta"
-        Me.Column7.Name = "Column7"
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Location = New System.Drawing.Point(18, 57)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEliminar.TabIndex = 3
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(386, 57)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'cbxProductos
-        '
-        Me.cbxProductos.FormattingEnabled = True
-        Me.cbxProductos.Location = New System.Drawing.Point(18, 29)
-        Me.cbxProductos.Name = "cbxProductos"
-        Me.cbxProductos.Size = New System.Drawing.Size(121, 21)
-        Me.cbxProductos.TabIndex = 0
+        Me.txtGuardar.Location = New System.Drawing.Point(318, 288)
+        Me.txtGuardar.Name = "txtGuardar"
+        Me.txtGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.txtGuardar.TabIndex = 16
+        Me.txtGuardar.Text = "Guardar"
+        Me.txtGuardar.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -199,10 +60,10 @@ Partial Class Form3
         Me.GroupBox3.Controls.Add(Me.txtPrecioVenta)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.txtPrecioUnitario)
-        Me.GroupBox3.Location = New System.Drawing.Point(27, 258)
+        Me.GroupBox3.Location = New System.Drawing.Point(49, 248)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(211, 86)
-        Me.GroupBox3.TabIndex = 10
+        Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Precio"
         '
@@ -244,10 +105,10 @@ Partial Class Form3
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtProveedor)
         Me.GroupBox2.Controls.Add(Me.txtCodProveedor)
-        Me.GroupBox2.Location = New System.Drawing.Point(27, 182)
+        Me.GroupBox2.Location = New System.Drawing.Point(49, 172)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(363, 70)
-        Me.GroupBox2.TabIndex = 9
+        Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Proveedor"
         '
@@ -285,16 +146,16 @@ Partial Class Form3
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblCodigoProducto)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtCantidad)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Controls.Add(Me.txtCodigoProducto)
-        Me.GroupBox1.Location = New System.Drawing.Point(26, 66)
+        Me.GroupBox1.Location = New System.Drawing.Point(48, 56)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(364, 110)
-        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registro de Producto"
         '
@@ -339,29 +200,26 @@ Partial Class Form3
         Me.txtNombre.Size = New System.Drawing.Size(223, 20)
         Me.txtNombre.TabIndex = 1
         '
-        'txtCodigoProducto
+        'lblCodigoProducto
         '
-        Me.txtCodigoProducto.Location = New System.Drawing.Point(135, 19)
-        Me.txtCodigoProducto.Name = "txtCodigoProducto"
-        Me.txtCodigoProducto.Size = New System.Drawing.Size(223, 20)
-        Me.txtCodigoProducto.TabIndex = 0
+        Me.lblCodigoProducto.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblCodigoProducto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblCodigoProducto.Location = New System.Drawing.Point(135, 19)
+        Me.lblCodigoProducto.Name = "lblCodigoProducto"
+        Me.lblCodigoProducto.Size = New System.Drawing.Size(152, 20)
+        Me.lblCodigoProducto.TabIndex = 7
         '
-        'Form3
+        'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1134, 375)
-        Me.Controls.Add(Me.Productos)
-        Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.GroupBox4)
+        Me.ClientSize = New System.Drawing.Size(462, 359)
+        Me.Controls.Add(Me.txtGuardar)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form3"
-        Me.Text = "Form3"
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
-        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "Form6"
+        Me.Text = "Modificar"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -372,15 +230,10 @@ Partial Class Form3
 
     End Sub
 
-    Friend WithEvents Productos As Label
-    Friend WithEvents btnEditar As Button
-    Friend WithEvents btnNuevo As Button
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents dgvProductos As DataGridView
-    Friend WithEvents btnEliminar As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents cbxProductos As ComboBox
+    Friend WithEvents txtGuardar As Button
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtPrecioVenta As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtPrecioUnitario As TextBox
     Friend WithEvents GroupBox2 As GroupBox
@@ -394,16 +247,5 @@ Partial Class Form3
     Friend WithEvents Label1 As Label
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents txtNombre As TextBox
-    Friend WithEvents txtCodigoProducto As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents txtPrecioVenta As TextBox
-    Friend WithEvents txtBuscar As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents lblCodigoProducto As Label
 End Class

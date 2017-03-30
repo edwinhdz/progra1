@@ -13,35 +13,41 @@ Public Class Form5
     End Sub
 
     Private Sub btnAumentar_Click(sender As Object, e As EventArgs) Handles btnAumentar.Click
+        Try
+            If txtCantidad.Text <> "" And txtProveedor.Text <> "" Then
+                'crea el archivo temporal
+                sw = New StreamWriter("c:\Programacion1\temp.txt")
+                'lee los datos
+                sr = New StreamReader("C:\Programacion1\Datos.txt")
 
-        'crea el archivo temporal
-        sw = New StreamWriter("c:\Programacion1\temp.txt")
-        'lee los datos
-        sr = New StreamReader("C:\Programacion1\Datos.txt")
+                'Aqui se guarda cada linea
+                Dim line As String
+                line = sr.ReadLine()
+                Do While Not line Is Nothing 'Verifica que la linea NO esté vacia
+                    Dim categorias() As String = line.Split(" ") 'divide en secciones la cadena
+                    If categorias(0) = lblProducto.Text Then 'Cambia el valor de la linea donde está el código
+                        nuevalinea = categorias(0) & " " & categorias(1) & " " & (Val(categorias(2)) + Val(txtCantidad.Text) & " " & categorias(3) & " " & categorias(4) & " " & categorias(5) & " " & categorias(6) & " ")
+                        sw.WriteLine(nuevalinea)
+                    Else
+                        sw.WriteLine(line) 'Escribe la linea que NO sea del codigo
+                    End If
+                    line = sr.ReadLine() 'Cambia la línea 
+                Loop
+                'Se cierra la lectura y escritura
+                sw.Close()
+                sr.Close()
 
-        'Aqui se guarda cada linea
-        Dim line As String
-        line = sr.ReadLine()
-        Do While Not line Is Nothing 'Verifica que la linea NO esté vacia
-            Dim categorias() As String = line.Split(" ") 'divide en secciones la cadena
-
-            If categorias(0) = lblProducto.Text Then 'Cambia el valor
-                nuevalinea = categorias(0) & " " & categorias(1) & " " & (Val(categorias(2)) + Val(txtCantidad.Text) & " " & categorias(3) & " " & categorias(4) & " " & categorias(5) & " " & categorias(6) & " ")
-                sw.WriteLine(nuevalinea)
+                'aqui se renombrea el archivo temporal
+                File.Delete("c:\Programacion1\Datos.txt")
+                File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
+                Form3.leerProductos() 'Carga los productos en el combobox
+                Form3.CargarProductos() 'Carga los productos en el dataGridView
             Else
-                sw.WriteLine(line) 'Escribe la linea que NO sea del codigo
+                MsgBox("Faltan datos", MsgBoxStyle.Information, "Aviso")
             End If
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message)
+        End Try
 
-            line = sr.ReadLine()
-        Loop
-        'Se cierra la lectura y escritura
-        sw.Close()
-        sr.Close()
-
-        'aqui se renombrea el archivo temporal
-        File.Delete("c:\Programacion1\Datos.txt")
-        File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
-        Form3.leerProductos() 'Carga los productos en el combobox
-        Form3.CargarProductos() 'Carga los productos en el dataGridView
     End Sub
 End Class

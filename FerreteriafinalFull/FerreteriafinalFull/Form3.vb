@@ -6,19 +6,20 @@ Public Class Form3
     Public sr As StreamReader
     Public str As String
     Public fs As FileStream
+    Public band As Boolean = False
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
             If txtCodigoProducto.Text <> "" And txtNombre.Text <> "" And txtCantidad.Text <> "" And txtCodProveedor.Text <> "" And txtProveedor.Text <> "" And txtPrecioUnitario.Text <> "" And txtPrecioVenta.Text <> "" Then
-                If Not Directory.Exists("C:\Programacion1\") Then
-                    Directory.CreateDirectory("C:\Programacion1\")
-                End If
+                COMPROBARSIEXISTEELPRODUCTO()
                 fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
                 sw = New StreamWriter(fs)
                 MsgBox("Abriendo archivo")
                 str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text
                 sw.WriteLine(str)
                 MsgBox("Datos Guardados")
+                limpiar()
+
             Else
                 MsgBox("Faltan datos por llenar", MsgBoxStyle.Exclamation, "Aviso")
             End If
@@ -27,27 +28,13 @@ Public Class Form3
         Finally
             MsgBox("Cerrando el archivo")
             If (Not sw Is Nothing) Then sw.Close()
-
         End Try
 
-        txtCantidad.Clear()
-        txtCodigoProducto.Clear()
-        txtCodProveedor.Clear()
-        txtNombre.Clear()
-        txtPrecioUnitario.Clear()
-        txtPrecioVenta.Clear()
-        txtProveedor.Clear()
         leerProductos()
         CargarProductos()
-    End Sub
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
@@ -89,21 +76,19 @@ Public Class Form3
                 If categorias(0) <> cbxProductos.Text Then 'La condicion es que mientras line sea diferente al codigo, se escribe todo, menos donde está el código
                     sw.WriteLine(line)
                 End If
-
-                line = sr.ReadLine()
+                line = sr.ReadLine() 'cambio de linea
             Loop
             'Se cierra la lectura y escritura
             sw.Close()
             sr.Close()
 
-            'aqui se renombrea el archivo temporal
+            'aqui se renombra el archivo temporal
             File.Delete("c:\Programacion1\Datos.txt")
             File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
             leerProductos() 'Carga los productos en el combobox
             CargarProductos() 'Carga los productos en el dataGridView
-
         Catch ex As Exception
-
+            MsgBox("Error:" & ex.Message)
         End Try
 
 
@@ -114,9 +99,14 @@ Public Class Form3
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarProductos()
-        leerProductos()
-        cbxProductos.SelectedIndex = 0
+        If Not Directory.Exists("C:\Programacion1") Then
+            CrearCarpetaArchivo()
+        Else
+            CargarProductos()
+            leerProductos()
+            cbxProductos.SelectedIndex = 0
+        End If
+
     End Sub
     Public Sub leerProductos()
         'AÑADE AL COMBOBOX LOS CODIGOS DE LOS PRODUCTOS
@@ -139,13 +129,6 @@ Public Class Form3
         End Try
     End Sub
     Public Sub CargarProductos()
-        'Creacion de carpeta y archivo al abrir el form
-        If Not Directory.Exists("C:\Programacion1") Then
-            Directory.CreateDirectory("C:\Programacion1")
-        End If
-        If Not File.Exists("C:\Programacion1\Datos.txt") Then
-            File.CreateText("C:\Programacion1\Datos.txt")
-        End If
 
         'Comienza el intento
         Try
@@ -176,5 +159,44 @@ Public Class Form3
 
     Private Sub cbxProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxProductos.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub COMPROBARSIEXISTEELPRODUCTO()
+        sr = New StreamReader("C:\Programacion1\Datos.txt")
+        Dim linea As String
+        linea = sr.ReadLine
+        Do While Not linea Is Nothing
+            Dim categorias() As String = linea.Split(" ")
+            If categorias(0) = txtCodigoProducto.Text Then
+                MsgBox("El producto ya existe", MsgBoxStyle.Exclamation, "Información")
+            End If
+            linea = sr.ReadLine()
+        Loop
+        sr.Close()
+
+    End Sub
+
+    Private Sub CrearCarpetaArchivo()
+        'Creacion de carpeta y archivo al abrir el form
+        If Not Directory.Exists("C:\Programacion1") Then
+            Directory.CreateDirectory("C:\Programacion1")
+        End If
+
+        If Not File.Exists("C:\Programacion1\Datos.txt") Then
+            File.CreateText("C:\Programacion1\Datos.txt")
+        End If
+    End Sub
+    Private Sub limpiar()
+        txtCantidad.Clear()
+        txtCodigoProducto.Clear()
+        txtCodProveedor.Clear()
+        txtNombre.Clear()
+        txtPrecioUnitario.Clear()
+        txtPrecioVenta.Clear()
+        txtProveedor.Clear()
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Form6.Show()
     End Sub
 End Class
