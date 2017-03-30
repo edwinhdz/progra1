@@ -13,33 +13,31 @@ Public Class Form5
     End Sub
 
     Private Sub btnAumentar_Click(sender As Object, e As EventArgs) Handles btnAumentar.Click
-        Try
 
-            sr = New StreamReader("C:\Programacion1\Datos.txt")
-            'Busca el SKU
-            'Escribe la nueva linea (registro)
-            str = sr.ReadLine()
-            Do While Not str Is Nothing
-                Dim categorias() As String = str.Split(" ")
-                If categorias(0) = lblProducto.Text Then
-                    categorias(2) = Val(categorias(2)) + Val(txtCantidad.Text)
-                    nuevalinea = categorias(0) & " " & categorias(1) & " " & categorias(2) & " " & categorias(3) & " " & categorias(4) & " " & categorias(5) & " " & categorias(6) & " "
-                End If
-                str = sr.ReadLine()
-            Loop
-            sr.Close()
-            'str = txtCodigoProducto.Text
+        'crea el archivo temporal
+        sw = New StreamWriter("c:\Programacion1\temp.txt")
+        'lee los datos
+        sr = New StreamReader("C:\Programacion1\Datos.txt")
 
-            'Escribe la nueva linea del registro
-            fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
-            sw = New StreamWriter(fs)
+        'Aqui se guarda cada linea
+        Dim line As String
+        line = sr.ReadLine()
+        Do While Not line Is Nothing 'Verifica que la linea NO esté vacia
+            Dim categorias() As String = line.Split(" ") 'divide en secciones la cadena
+            If categorias(0) <> cbxProductos.Text Then 'La condicion es que mientras line sea diferente al codigo, se escribe todo, menos donde está el código
+                sw.WriteLine(line)
+            End If
 
+            line = sr.ReadLine()
+        Loop
+        'Se cierra la lectura y escritura
+        sw.Close()
+        sr.Close()
 
-        Catch ex As Exception
-            MsgBox("Error : " & ex.Message)
-        Finally
-            MsgBox("Cerrando el archivo")
-            If (Not sw Is Nothing) Then sw.Close()
-        End Try
+        'aqui se renombrea el archivo temporal
+        File.Delete("c:\Programacion1\Datos.txt")
+        File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
+        leerProductos() 'Carga los productos en el combobox
+        CargarProductos() 'Carga los productos en el dataGridView
     End Sub
 End Class
