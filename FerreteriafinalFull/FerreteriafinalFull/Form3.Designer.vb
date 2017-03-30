@@ -26,8 +26,16 @@ Partial Class Form3
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cbxProductos = New System.Windows.Forms.ComboBox()
@@ -48,14 +56,6 @@ Partial Class Form3
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -66,7 +66,7 @@ Partial Class Form3
         'Productos
         '
         Me.Productos.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Productos.Location = New System.Drawing.Point(123, 20)
+        Me.Productos.Location = New System.Drawing.Point(27, 9)
         Me.Productos.Name = "Productos"
         Me.Productos.Size = New System.Drawing.Size(155, 39)
         Me.Productos.TabIndex = 15
@@ -74,7 +74,7 @@ Partial Class Form3
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(155, 56)
+        Me.btnEditar.Location = New System.Drawing.Point(120, 56)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(75, 23)
         Me.btnEditar.TabIndex = 13
@@ -106,9 +106,18 @@ Partial Class Form3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Lista de Productos"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(215, 55)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(104, 26)
+        Me.Button2.TabIndex = 14
+        Me.Button2.Text = "Aumentar cantidad"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(141, 30)
+        Me.txtBuscar.Location = New System.Drawing.Point(386, 30)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(224, 20)
         Me.txtBuscar.TabIndex = 5
@@ -123,9 +132,44 @@ Partial Class Form3
         Me.dgvProductos.Size = New System.Drawing.Size(708, 252)
         Me.dgvProductos.TabIndex = 4
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "SKU"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Cantidad"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Cod Proveedor"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "NombreProveedor"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "P. Unitario"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "P. Venta"
+        Me.Column7.Name = "Column7"
+        '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(53, 57)
+        Me.btnEliminar.Location = New System.Drawing.Point(18, 57)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
         Me.btnEliminar.TabIndex = 3
@@ -144,7 +188,7 @@ Partial Class Form3
         'cbxProductos
         '
         Me.cbxProductos.FormattingEnabled = True
-        Me.cbxProductos.Location = New System.Drawing.Point(7, 30)
+        Me.cbxProductos.Location = New System.Drawing.Point(18, 29)
         Me.cbxProductos.Name = "cbxProductos"
         Me.cbxProductos.Size = New System.Drawing.Size(121, 21)
         Me.cbxProductos.TabIndex = 0
@@ -301,50 +345,6 @@ Partial Class Form3
         Me.txtCodigoProducto.Name = "txtCodigoProducto"
         Me.txtCodigoProducto.Size = New System.Drawing.Size(223, 20)
         Me.txtCodigoProducto.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(250, 55)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(104, 26)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "Aumentar cantidad"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "SKU"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Cod Proveedor"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "NombreProveedor"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "P. Unitario"
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "P. Venta"
-        Me.Column7.Name = "Column7"
         '
         'Form3
         '

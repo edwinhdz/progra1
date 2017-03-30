@@ -9,21 +9,27 @@ Public Class Form3
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
-            If Not Directory.Exists("C:\Programacion1\") Then
-                Directory.CreateDirectory("C:\Programacion1\")
+            If txtCodigoProducto.Text <> "" And txtNombre.Text <> "" And txtCantidad.Text <> "" And txtCodProveedor.Text <> "" And txtProveedor.Text <> "" And txtPrecioUnitario.Text <> "" And txtPrecioVenta.Text <> "" Then
+                If Not Directory.Exists("C:\Programacion1\") Then
+                    Directory.CreateDirectory("C:\Programacion1\")
+                End If
+                fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
+                sw = New StreamWriter(fs)
+                MsgBox("Abriendo archivo")
+                str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text
+                sw.WriteLine(str)
+                MsgBox("Datos Guardados")
+            Else
+                MsgBox("Faltan datos por llenar", MsgBoxStyle.Exclamation, "Aviso")
             End If
-            fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
-            sw = New StreamWriter(fs)
-            MsgBox("Abriendo archivo")
-            str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text
-            sw.WriteLine(str)
-            MsgBox("Datos Guardados")
         Catch ex As Exception
             MsgBox("Error : " & ex.Message)
         Finally
             MsgBox("Cerrando el archivo")
             If (Not sw Is Nothing) Then sw.Close()
+
         End Try
+
         txtCantidad.Clear()
         txtCodigoProducto.Clear()
         txtCodProveedor.Clear()

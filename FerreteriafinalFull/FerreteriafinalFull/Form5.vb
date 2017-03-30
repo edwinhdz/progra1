@@ -26,7 +26,8 @@ Public Class Form5
             Dim categorias() As String = line.Split(" ") 'divide en secciones la cadena
 
             If categorias(0) = lblProducto.Text Then 'Cambia el valor
-                sw.WriteLine(categorias(0), categorias(1), Val(categorias(2)) + Val(txtCantidad.Text), categorias(3), categorias(4), categorias(5), categorias(6))
+                nuevalinea = categorias(0) & " " & categorias(1) & " " & (Val(categorias(2)) + Val(txtCantidad.Text) & " " & categorias(3) & " " & categorias(4) & " " & categorias(5) & " " & categorias(6) & " ")
+                sw.WriteLine(nuevalinea)
             Else
                 sw.WriteLine(line) 'Escribe la linea que NO sea del codigo
             End If
