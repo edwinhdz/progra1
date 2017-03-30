@@ -29,6 +29,11 @@ Partial Class Form3
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cbxProductos = New System.Windows.Forms.ComboBox()
@@ -49,11 +54,6 @@ Partial Class Form3
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtCodigoProducto = New System.Windows.Forms.TextBox()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -94,7 +94,7 @@ Partial Class Form3
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
         Me.btnNuevo.TabIndex = 12
-        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.Text = "Agregar"
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -127,6 +127,31 @@ Partial Class Form3
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.Size = New System.Drawing.Size(560, 225)
         Me.dgvProductos.TabIndex = 4
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "SKU"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Cantidad"
+        Me.Column5.Name = "Column5"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "P. Unitario"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "P. Venta"
+        Me.Column4.Name = "Column4"
         '
         'btnEliminar
         '
@@ -306,31 +331,6 @@ Partial Class Form3
         Me.txtCodigoProducto.Name = "txtCodigoProducto"
         Me.txtCodigoProducto.Size = New System.Drawing.Size(223, 20)
         Me.txtCodigoProducto.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "SKU"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Cantidad"
-        Me.Column5.Name = "Column5"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "P. Unitario"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "P. Venta"
-        Me.Column4.Name = "Column4"
         '
         'Form3
         '

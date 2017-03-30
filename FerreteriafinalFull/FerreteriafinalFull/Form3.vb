@@ -69,6 +69,25 @@ Public Class Form3
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
+
+
+        Using fileWrite As New StreamWriter("c:\Programacion1\temp.txt")
+            Using fielRead As New StreamReader("C:\Programacion1\Datos.txt")
+                Dim line As [String]
+
+                While (InlineAssignHelper(line, fielRead.ReadLine())) IsNot Nothing
+                    Dim datos As String() = line.Split(New Char() {","c})
+                    If datos(0) <> txtBuscar.Text Then
+                        fileWrite.WriteLine(line)
+
+                    End If
+                End While
+            End Using
+        End Using
+
+        'aqui se renombrea el archivo temporal
+        File.Delete("c:\Programacion1\Datos.txt")
+        File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
     End Sub
 
     Private Sub dgvProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
