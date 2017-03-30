@@ -173,7 +173,6 @@ Public Class Form3
             linea = sr.ReadLine()
         Loop
         sr.Close()
-
     End Sub
 
     Private Sub CrearCarpetaArchivo()
