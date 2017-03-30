@@ -15,7 +15,7 @@ Public Class Form3
             fs = New FileStream("C:\Programacion1\Datos.txt", FileMode.Append, FileAccess.Write)
             sw = New StreamWriter(fs)
             MsgBox("Abriendo archivo")
-            str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text
+            str = txtCodigoProducto.Text & " " & txtNombre.Text & " " & txtCantidad.Text & " " & txtCodProveedor.Text & " " & txtProveedor.Text & " " & txtPrecioUnitario.Text & " " & txtPrecioVenta.Text
             sw.WriteLine(str)
             MsgBox("Datos Guardados")
         Catch ex As Exception
@@ -35,7 +35,7 @@ Public Class Form3
         CargarProductos()
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -72,23 +72,23 @@ Public Class Form3
 
 
 
-        Using fileWrite As New StreamWriter("c:\Programacion1\temp.txt")
-            Using fielRead As New StreamReader("C:\Programacion1\Datos.txt")
-                Dim line As [String]
+        'Using fileWrite As New StreamWriter("c:\Programacion1\temp.txt")
+        '    Using fielRead As New StreamReader("C:\Programacion1\Datos.txt")
+        '        Dim line As [String]
 
-                While (InlineAssignHelper(line, fielRead.ReadLine())) IsNot Nothing
-                    Dim datos As String() = line.Split(New Char() {","c})
-                    If datos(0) <> txtBuscar.Text Then
-                        fileWrite.WriteLine(line)
+        '        While (InlineAssignHelper(line, fielRead.ReadLine())) IsNot Nothing
+        '            Dim datos As String() = line.Split(New Char() {","c})
+        '            If datos(0) <> txtBuscar.Text Then
+        '                fileWrite.WriteLine(line)
 
-                    End If
-                End While
-            End Using
-        End Using
+        '            End If
+        '        End While
+        '    End Using
+        'End Using
 
-        'aqui se renombrea el archivo temporal
-        File.Delete("c:\Programacion1\Datos.txt")
-        File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
+        ''aqui se renombrea el archivo temporal
+        'File.Delete("c:\Programacion1\Datos.txt")
+        'File.Move("c:\Programacion1\temp.txt", "c:\Programacion1\Datos.txt")
     End Sub
 
     Private Sub dgvProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
@@ -100,8 +100,9 @@ Public Class Form3
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        leerProductos()
         CargarProductos()
+        leerProductos()
+        cbxProductos.SelectedIndex = 0
     End Sub
     Private Sub leerProductos()
         'AÑADE AL COMBOBOX LOS CODIGOS DE LOS PRODUCTOS
@@ -124,6 +125,15 @@ Public Class Form3
         End Try
     End Sub
     Private Sub CargarProductos()
+        'Creacion de carpeta y archivo al abrir el form
+        If Not Directory.Exists("C:\Programacion1") Then
+            Directory.CreateDirectory("C:\Programacion1")
+        End If
+        If Not File.Exists("C:\Programacion1\Datos.txt") Then
+            File.CreateText("C:\Programacion1\Datos.txt")
+        End If
+
+        'Comienza el intento
         Try
             dgvProductos.Rows.Clear()
             ' Crear un flujo desde el fichero doc.txt
@@ -132,7 +142,7 @@ Public Class Form3
             str = sr.ReadLine()
             Do While Not str Is Nothing
                 Dim categorias() As String = str.Split(" ")
-                dgvProductos.Rows.Add(categorias(0), categorias(1), categorias(2), categorias(3), categorias(4))
+                dgvProductos.Rows.Add(categorias(0), categorias(1), categorias(2), categorias(3), categorias(4), categorias(5), categorias(6))
                 'MsgBox(categorias(0) & " " & categorias(1) & " " & " " & categorias(2))
                 str = sr.ReadLine()
             Loop
@@ -143,6 +153,14 @@ Public Class Form3
             ' Cerrar el fichero
             If (Not sr Is Nothing) Then sr.Close()
         End Try
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Form5.Show()
+    End Sub
+
+    Private Sub cbxProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxProductos.SelectedIndexChanged
 
     End Sub
 End Class
