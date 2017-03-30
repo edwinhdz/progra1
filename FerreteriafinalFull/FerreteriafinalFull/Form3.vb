@@ -112,7 +112,7 @@ Public Class Form3
         leerProductos()
         cbxProductos.SelectedIndex = 0
     End Sub
-    Private Sub leerProductos()
+    Public Sub leerProductos()
         'AÑADE AL COMBOBOX LOS CODIGOS DE LOS PRODUCTOS
         Try
             cbxProductos.Items.Clear()
@@ -132,7 +132,7 @@ Public Class Form3
             If (Not sr Is Nothing) Then sr.Close()
         End Try
     End Sub
-    Private Sub CargarProductos()
+    Public Sub CargarProductos()
         'Creacion de carpeta y archivo al abrir el form
         If Not Directory.Exists("C:\Programacion1") Then
             Directory.CreateDirectory("C:\Programacion1")
